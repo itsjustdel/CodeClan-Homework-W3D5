@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
-
 {% block content %}
-    <h1>Player vs Player</h1>
-    <form action="/pvp" method="post">
+    <h1>{{title}}</h1>
+    <form action="/add_player" method="post">
 
         <label for="name">Name:</label>
         <input type="text" name="name" id="name">
@@ -14,9 +13,7 @@
         <option value="paper">Paper</option>
         <option value="scissors">Scissors</option>        
         </select>
-
-        <input type="submit" value="Play">
-      
+        <input type="submit" value="Next">
       
       </form>
 {% endblock content %}
