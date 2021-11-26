@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>{{title}}</h1>
-    <form action="/add_player" method="post">
+    <form action= {{game_type}} method="post">
 
         <label for="name">Name:</label>
         <input type="text" name="name" id="name">
@@ -13,7 +13,7 @@
         <option value="paper">Paper</option>
         <option value="scissors">Scissors</option>        
         </select>
-        <input type="submit" value="Next">
+        <input type="submit" value={{button_text}}>
       
       </form>
 {% endblock content %}

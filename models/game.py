@@ -1,3 +1,5 @@
+import random
+from models.player import Player
 def winner(player1, player2):
     # decision array idea from
     #https://codereview.stackexchange.com/questions/144013/rock-paper-scissors-c-game
@@ -10,3 +12,9 @@ def winner(player1, player2):
     
 
     return decision_array[player1.choiceInt][player2.choiceInt]
+
+def create_cpu_player():
+    return Player("Computer",choice_for_cpu())
+
+def choice_for_cpu():
+    return random.choice(["rock", "paper", "scissors"])

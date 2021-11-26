@@ -3,6 +3,4 @@ class Player:
         self.name = name
         self.choice = choice
         #quickly turn string list in to integer for cleaner game logic
-        self.choiceInt = ["rock", "paper","scissors"].index(choice) #python is mad
-
-    
+        self.choiceInt = ["rock", "paper","scissors"].index(choice) #python! :S
