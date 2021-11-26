@@ -1,0 +1,13 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for player in player_list %}            
+            {{player.name}} chose {{player.choice}}
+            <br/>
+        {% endfor %}
+        <br/>
+        {{winning_player.name}} won
+    </body>
+</html>

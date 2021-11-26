@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Player vs Player</h1>
+    <form action="/pvp" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name">
+      
+        <label for="choice">Choose Your Move!:</label>
+
+        <select name="choice" id="choice">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>        
+        </select>
+
+        <input type="submit" value="Play">
+      
+      
+      </form>
+{% endblock content %}
