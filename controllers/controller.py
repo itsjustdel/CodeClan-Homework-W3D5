@@ -10,17 +10,17 @@ def index():
     players.clear()
     return render_template('index.html', title='Rock, Paper, Scissors!')
 
+# test function to check if manually entering "rock", "paper", or "scissors" works        
 @app.route('/game/<choice1>/<choice2>/')
-def play_game(choice1,choice2):
-    
+def play_game(choice1,choice2):    
     player1 = Player("Agamemnon", choice1)
     player2 = Player("Achilles", choice2)
-    player_list = [player1, player2]
+    _player_list = [player1, player2]
 
-    winning_player = winner(player1,player2)
-    return render_template('outcome.html',player_list=player_list, winning_player=winning_player)
+    winning_player = winner(_player_list)
+    return render_template('outcome.html',player_list=_player_list, winning_player=winning_player)
 
-@app.route('/add_player/<game_type>') #add var for button name?
+@app.route('/add_player/<game_type>')
 def add_player_page(game_type):
     # button should read "Play!" if we already have a player in the list, or game is against cpu
     # ternary declaration
@@ -40,8 +40,10 @@ def add_player(game_type):
 
     # check if we have enough players to play game (including computer)
     if len(players) == 2:
-        return render_template('outcome.html',player_list=players, winning_player=winner(players[0],players[1]))
+        return render_template('outcome.html',player_list=players, winning_player=winner(players)) 
     else:
-        # if we do not have enough, go to the page where we can add another player
-        # carry the game type with us
+        # if we do not have enough players yet, go to the page where we can add one
+        # carry the game type with us so the form can point us back to this method
         return add_player_page(game_type)
+
+# notes: Better to create a game instance and save game type there? Then how would add_player_form work with game_type??

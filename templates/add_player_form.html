@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     <h1>{{title}}</h1>
+    <!-- carrying the jvar game_Type with us so we can re-use this html for 1st player and 2nd player -->
     <form action= {{game_type}} method="post">
 
         <label for="name">Name:</label>
@@ -15,5 +16,5 @@
         </select>
         <input type="submit" value={{button_text}}>
       
-      </form>
+    </form>
 {% endblock content %}
