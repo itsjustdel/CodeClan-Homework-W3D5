@@ -1,11 +1,18 @@
 <html>
     <head>
-        <title>{{ title }}</title>
+        <title>Rock, Paper, Scissors!</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        
     </head>
     <body>
-        <nav>
-            <a href="/game/">Home</a>
-        </nav>        
+        <nav >
+            <a class = "nav_bar" href="{{url_for('index')}}">Home</a>
+        </nav>                
         {% block content %}
             
         {% endblock content %}

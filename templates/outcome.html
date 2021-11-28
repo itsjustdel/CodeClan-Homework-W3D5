@@ -2,21 +2,31 @@
 {% block content %}
 
 <html>
-    <head>
-
-    </head>
     <body>
-        {% for player in player_list %}            
-            {{player.name}} chose {{player.choice}}
-            <br/>
-        {% endfor %}
+        <br>
+        <div id="outcome">
+            <h2>
+                {% for player in player_list %}            
+                <div id="outcome_{{loop.index}}">
+                {{player.name}} chooses {{player.choice}}...
+                </div>
+            <br/>                
+                {% endfor %}
+            </h2>
+        </div>
         <br/>        
-        {% if winning_player.name %}
-            {{winning_player.name}} won!    
-        {% else %}
-            A Draw!
-        {% endif %}
-        
+        <div id="outcome_winner">
+            
+            
+
+            {% if winning_player.name %}
+                {{winning_player.name}} won!    
+            {% else %}
+
+                IT'S A DRAW!
+            {% endif %}
+            
+        </div>
         
     </body>
 </html>

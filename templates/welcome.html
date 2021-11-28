@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section id = "splash">
+        <h1>ROCK, PAPER, SCISSORS</h1>
+        <h2>Crush your opponent with sheer guesswork!</h2>
+        <p>Rock beats scissors,<p>
+        <p>scissors beats paper,</p>
+        <p>paper beats rock!</p>
+        <img id = "splash_image" src=/static/images/splash.png alt="game image"> 
+    </section>
+    
+
+    <nav class = "buttons">     
+        <span>
+        <a class="p_button"href="{{url_for('add_player', game_type="pvp") }}">Player vs Player</a>
+        </span>
+
+        <span>
+        <a class="p_button" href="{{url_for('add_player', game_type="pve") }}">Player vs CPU</a>
+        </span>
+    
+{% endblock content %}

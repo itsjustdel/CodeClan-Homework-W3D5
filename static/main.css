@@ -1,0 +1,135 @@
+html
+{
+    background:	#d1f1fd;
+    font-family: 'Sigmar One', cursive;
+}
+
+.nav_bar
+{    
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    padding: 10px;
+    display: block;
+    background:	#A0DEF5;
+    color: black;
+    width: 50%;
+    border: black;    
+}
+
+#splash{
+    position: relative;
+}
+#splash_image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1
+{
+    font-family: 'Sigmar One', cursive;
+    text-align: center;    
+}
+
+h2
+{
+    font-family: 'Sigmar One', cursive;
+    text-align: center;
+}
+
+p
+{
+    font-family: 'Sigmar One', cursive;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+}
+
+.buttons
+{
+    padding: 50px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    display :flex;
+    justify-content: center;
+    
+    
+}
+.p_button
+{
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-self: center;
+    padding: 20px;
+    
+    
+    margin: .2rem;
+    text-decoration: none;
+    color:black;
+    border-radius: .125rem;
+	border: 2px solid black;
+    border-radius: 1.1875rem;
+   
+    transition: 0.3s;
+}
+
+.p_button:hover
+{
+    background-color: #FFC07C;
+    opacity: 0.9;
+    transition: 0.3s;
+    color: white;
+}
+
+input{
+    color: black;
+    transition: 0.3s;
+}
+
+form{
+     text-align: center;
+    justify-content: center; 
+}
+
+label{
+    margin: 10px;
+}
+
+input{
+    margin:10px;
+}
+#outcome_1{
+
+    text-align: center;    
+    justify-content: center;
+    -webkit-animation: 1s ease 0s normal forwards 1 fadein;
+    animation: 1s ease 0s normal forwards 1 fadein;
+}
+
+#outcome_2{
+
+    text-align: center;    
+    justify-content: center;     
+    animation: 2s ease 0s normal forwards 1 fadein;
+}
+
+#outcome_winner{
+    font-size: 100px;
+    text-align: center;    
+    justify-content: center; 
+    opacity: 0;
+    animation: 1s ease 3s normal forwards fadein ;
+    color: #FFC07C;
+    text-shadow: #000 0px 0px 2px;
+}
+
+@keyframes fadein{
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}

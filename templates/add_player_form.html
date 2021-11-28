@@ -1,20 +1,26 @@
 {% extends 'base.html' %}
+
 {% block content %}
-    <h1>{{title}}</h1>
-    <!-- carrying the jvar game_Type with us so we can re-use this html for 1st player and 2nd player -->
+    <h1>GET READY...</h1>
+    <!-- carrying the jvar "game_type" with us so we can re-use this html for 1st player and 2nd player -->
+    <!-- on submit, the form's "action" will send the data to "/pvp" or "/pve", depending on what we passed in-->
+    <!-- controller.py will then take over routing from there -->
     <form action= {{game_type}} method="post">
 
         <label for="name">Name:</label>
         <input type="text" name="name" id="name">
-      
-        <label for="choice">Choose Your Move!:</label>
 
-        <select name="choice" id="choice">
-        <option value="rock">Rock</option>
-        <option value="paper">Paper</option>
-        <option value="scissors">Scissors</option>        
-        </select>
-        <input type="submit" value={{button_text}}>
-      
+        <div>
+            <label for="choice">Choose Your Move!</label>        
+            <select name="choice" id="choice">
+            <option value="rock">Rock</option>
+            <option value="paper">Paper</option>
+            <option value="scissors">Scissors</option>        
+            </select>
+        </div>
+        
+        <nav class="buttons">
+            <input class= "p_button" type="submit" value={{button_text}}>
+        </nav>
     </form>
 {% endblock content %}
